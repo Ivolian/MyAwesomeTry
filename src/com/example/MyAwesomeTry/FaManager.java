@@ -1,17 +1,22 @@
 package com.example.MyAwesomeTry;
 
+import android.content.Context;
+import android.graphics.Typeface;
+import android.util.Log;
+
 import java.util.HashMap;
 import java.util.Map;
 
 
-public class FontAwesomeManager {
+public class FaManager {
+
+    // =============== ICON_TEXT =================
 
     private static String DEFAULT_ICON_TEXT = "\uf128";
 
     private static Map<String, String> cheatsheetMap = new HashMap<String, String>();
 
-    // fontawesome 在不断更新，可以往里面添加更多图标
-    // fontawesome.io/cheatsheet/
+    // the cheatsheetMap maybe need to update, you can test by yourself
     static {
         cheatsheetMap.put("fa-glass", "\uf000");
         cheatsheetMap.put("fa-music", "\uf001");
@@ -384,7 +389,6 @@ public class FontAwesomeManager {
         cheatsheetMap.put("fa-vimeo-square", "\uf194");
     }
 
-    // such as "fa-user"
     public static String getIconText(String icon) {
 
         if (icon == null) {
@@ -392,11 +396,25 @@ public class FontAwesomeManager {
         }
 
         String iconText = cheatsheetMap.get(icon);
-        if (iconText != null) {
-            return iconText;
+
+        return iconText == null ? DEFAULT_ICON_TEXT : iconText;
+    }
+
+    // =============== FA_FONT ===================
+
+    private static Typeface FA_FONT;
+
+    public static Typeface getFont(Context context) {
+
+        if (FA_FONT == null) {
+            try {
+                FA_FONT = Typeface.createFromAsset(context.getAssets(), "fontawesome-webfont.ttf");
+            } catch (Exception e) {
+                Log.e("hehe", "can not find fontawesome-webfont.ttf in asset");
+            }
         }
 
-        return DEFAULT_ICON_TEXT;
+        return FA_FONT;
     }
 
 }

@@ -5,7 +5,7 @@
 
     <application>
 
-        <activity android:name=".example.ExampleActivity"
+        <activity android:name=".example.MainActivity"
                   android:label="hehe"
                   android:theme="@android:style/Theme.Holo.Light">
 

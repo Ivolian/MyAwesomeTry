@@ -1,0 +1,102 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res/com.example.MyAwesomeTry"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:padding="25dp">
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:gravity="center_vertical"
+                  android:layout_marginBottom="10dp">
+
+        <com.example.MyAwesomeTry.FaIconView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:text="fa-user"
+                android:gravity="center"
+                android:textSize="42dp"
+                android:shadowColor="#22000000"
+                android:shadowDx="4"
+                android:shadowDy="4"
+                android:shadowRadius="2"
+                android:textColor="@color/bbutton_primary"
+                android:layout_marginRight="15dp"/>
+
+        <com.example.MyAwesomeTry.BootstrapEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="19dp"
+                app:roundedCorners="true"
+                android:text="Ivolianer"
+                android:padding="10dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:gravity="center_vertical">
+
+        <com.example.MyAwesomeTry.FaIconView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:text="fa-lock"
+                android:gravity="center"
+                android:textSize="48dp"
+                android:shadowColor="#22000000"
+                android:shadowDx="4"
+                android:shadowDy="4"
+                android:shadowRadius="2"
+                android:textColor="@color/bbutton_primary"
+                android:layout_marginRight="15dp"/>
+
+        <com.example.MyAwesomeTry.BootstrapEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="19dp"
+                app:roundedCorners="true"
+                android:hint="Enter the password"
+                android:padding="10dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="200dp"
+                  android:layout_height="wrap_content"
+                  android:padding="13dp"
+                  android:background="@drawable/bbuton_primary_rounded"
+                  android:layout_gravity="center_horizontal"
+                  android:layout_marginTop="30dp"
+                  android:gravity="center">
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Sign in"
+                  android:textColor="@android:color/white"
+                  android:textSize="21dp"
+                  android:textStyle="bold"
+                  android:layout_marginRight="10dp"/>
+
+        <com.example.MyAwesomeTry.FaIconView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="fa-sign-in"
+                android:textSize="24dp"
+                android:textColor="@android:color/white"/>
+
+    </LinearLayout>
+
+    <com.example.MyAwesomeTry.FaOnlyIconButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="fa-user"
+            android:background="@drawable/bbuton_info_rounded"
+            android:textSize="24dp"
+            android:shadowColor="#22000000"
+            android:shadowDx="5"
+            android:shadowDy="5"
+            android:shadowRadius="2"
+            android:textColor="@android:color/white"/>
+
+</LinearLayout>

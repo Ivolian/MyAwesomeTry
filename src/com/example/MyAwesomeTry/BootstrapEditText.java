@@ -77,7 +77,7 @@ public class BootstrapEditText extends EditText {
         typedArray.recycle();
     }
 
-    //  ============ 共有方法 ============
+    //  ============ 公有方法 ============
 
     public void setState(State state) {
 
